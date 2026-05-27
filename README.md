@@ -1,120 +1,557 @@
-# Smart Todo — Enterprise Task Management
+# 🚀 Smart Todo — Enterprise Productivity & Task Management Platform
 
-Smart Todo is a modern, responsive enterprise-style task management platform. It delivers polished dashboards, Gmail-based reminders, Firestore task storage, and a free scheduler for automated email notifications.
+<p align="center">
+  <img src="Screenshots/dashboard-dark.png" alt="Smart Todo Banner" width="100%" />
+</p>
 
-**Author:** Ibrahim Ahmed Qureshi
+<h1 align="center">Smart Todo</h1>
 
-**Status:** UI redesign complete. Free backend scheduler implemented with Gmail SMTP and GitHub Actions.
+<p align="center">
+  <strong>Modern • Intelligent • Enterprise Productivity Platform</strong>
+</p>
 
-## Features
-- Responsive dashboard with collapsible sidebar and polished enterprise UI
-- Task categories: Ongoing, Pending, Completed, Reports, Community, and more
-- Priority labels: Low / Medium / High / Critical
-- Drag-and-drop task reordering and Eisenhower matrix support
-- Task reminders with Gmail notifications at scheduled time or pre-alert time
-- Real-time Firestore sync for tasks and sections
-- Free scheduler using GitHub Actions, no paid Firebase Functions required
-- Authentication via Gmail sign-in with email verification enforcement
+<p align="center">
+  Smart Todo is a premium productivity and task management platform inspired by Todoist, TickTick, Linear, and Notion.  
+  It combines intelligent task scheduling, real-time synchronization, Gmail reminder automation, productivity workflows, and a modern enterprise-grade UI experience.
+</p>
 
-## Technologies Used
-- Frontend: Vanilla JavaScript, HTML5, CSS3
-- Styling: `css/dashboard.css` and existing style assets
-- Backend scheduler: Node.js, `firebase-admin`, `nodemailer`
-- Storage: Firebase Firestore
-- Automation: GitHub Actions scheduled workflow
+---
 
-## Installation
+<p align="center">
 
-### 1. Frontend setup
-1. Open `html/main1.html` in a browser or host it via Firebase Hosting.
-2. Ensure Firebase config is set correctly in `js/firebase-config.js`.
-3. Use Gmail sign-in or email sign-up to create user accounts.
+  <img src="https://img.shields.io/badge/Frontend-HTML5%20%7C%20CSS3%20%7C%20JavaScript-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Database-Firebase%20Firestore-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge" />
 
-### 2. Backend scheduler setup (Vercel)
+</p>
 
-This project supports running the scheduler on Vercel using serverless API routes and the Vercel Cron Jobs feature.
+---
 
-1. Install dependencies locally (optional):
-```powershell
-cd c:\Users\IbrahimAhmed Qureshi\Projects\todo
+# ✨ Features
+
+## 📋 Advanced Task Management
+
+- ✅ Create, edit, update, and delete tasks
+- ✅ Task due date & time scheduling
+- ✅ Priority management system
+  - Low
+  - Medium
+  - High
+  - Critical
+- ✅ Task descriptions & notes
+- ✅ Mark tasks as completed
+- ✅ Real-time Firestore synchronization
+- ✅ Structured productivity workflow
+
+---
+
+## 🧠 Productivity Features
+
+- 📌 Eisenhower Matrix support
+- 📅 Calendar-based task planning
+- 📂 Pending / Ongoing / Completed sections
+- ⚡ Smart productivity workflows
+- 📊 Daily task organization
+- 🧩 Focus-driven task categorization
+
+---
+
+## 🎨 Modern Enterprise UI
+
+- 🌙 Dark mode & ☀️ Light mode
+- 📱 Fully responsive layout
+- 🪟 Glassmorphism-inspired design
+- 📌 Collapsible sidebar navigation
+- ✨ Smooth transitions & animations
+- 💎 Premium enterprise-grade UI
+- 📲 Mobile-friendly experience
+
+---
+
+## 🔔 Automated Gmail Reminder System
+
+- 📧 Scheduled task reminder emails
+- ⏰ Deadline & pre-alert notifications
+- 🔁 Automated reminder scheduler
+- 📮 Gmail SMTP integration using Nodemailer
+- ⚡ Lightweight serverless notification system
+
+---
+
+## ☁️ Backend & Cloud Features
+
+- 🔥 Firebase Firestore integration
+- 🔄 Real-time task synchronization
+- 🚀 Vercel deployment support
+- 🤖 GitHub Actions automation
+- 🧠 Optimized Firestore queries & indexing
+
+---
+
+# 🖼️ Screenshots
+
+---
+
+## 🔐 Login Page
+
+<p align="center">
+  <img src="Screenshots/login.png" alt="Login Page" width="100%" />
+</p>
+
+---
+
+## ☀️ Dashboard — Light Mode
+
+<p align="center">
+  <img src="Screenshots/dashboard-light.png" alt="Dashboard Light" width="100%" />
+</p>
+
+---
+
+## 🌙 Dashboard — Dark Mode
+
+<p align="center">
+  <img src="Screenshots/dashboard-dark.png" alt="Dashboard Dark" width="100%" />
+</p>
+
+---
+
+## ➕ Add Task Interface
+
+<p align="center">
+  <img src="Screenshots/add-task.png" alt="Add Task Interface" width="100%" />
+</p>
+
+---
+
+## 📅 Calendar View
+
+<p align="center">
+  <img src="Screenshots/calendar.png" alt="Calendar View" width="100%" />
+</p>
+
+---
+
+## ⚡ Eisenhower Matrix
+
+<p align="center">
+  <img src="Screenshots/eisenhower-matrix.png" alt="Eisenhower Matrix" width="100%" />
+</p>
+
+---
+
+# 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|-------------|
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| Backend | Node.js |
+| Database | Firebase Firestore |
+| Authentication | Firebase Authentication |
+| Email Service | Nodemailer + Gmail SMTP |
+| Deployment | Vercel |
+| Automation | GitHub Actions |
+| Styling | Custom CSS + Glassmorphism UI |
+
+---
+
+# 📁 Project Structure
+
+```bash
+smart-task-manager/
+│
+├── api/                         # Vercel serverless API routes
+├── backend/                     # Reminder scheduler scripts
+├── css/                         # Styling files
+├── html/                        # Frontend pages
+├── js/                          # Frontend JavaScript
+├── screenshots/                 # Application screenshots
+├── .github/workflows/           # GitHub Actions workflows
+├── firestore.indexes.json
+├── firebase.json
+├── package.json
+├── vercel.json
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/smart-task-manager.git
+cd smart-task-manager
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
 npm install
 ```
 
-2. Create a Firebase service account for the backend:
-   - Open Firebase Console → Project Settings → Service Accounts
-   - Generate a new private key (JSON)
+---
 
-3. Add the following environment variables in your Vercel project settings (Dashboard → Settings → Environment Variables):
-   - `FIREBASE_SERVICE_ACCOUNT` — copy the entire JSON content (stringified)
-   - `GMAIL_USER` — your Gmail address (sender)
-   - `GMAIL_APP_PASSWORD` — the 16-character App Password
-   - `MAIL_FROM` — optional (defaults to `GMAIL_USER`)
-   - `SCHEDULER_TOKEN` — a strong random token used by the scheduler to authenticate calls to the API endpoint
+## 3️⃣ Configure Firebase
 
-4. Deploy to Vercel:
-   - Connect the repo to Vercel and import the project (Vercel detects `package.json` and `api/` routes)
-   - Ensure `vercel.json` is present (included in this repo)
+Create a Firebase project and enable the following services:
 
-5. Configure Vercel Cron Job:
-   - In the Vercel dashboard, go to **Jobs** → **Create Job**
-   - Set the schedule to run every minute (cron expression: `* * * * *`)
-   - Set the request URL to: `https://<your-deployment>/api/send-reminders`
-   - Add the HTTP header: `x-scheduler-token: <your SCHEDULER_TOKEN>`
+- Firebase Authentication
+- Google Sign-In
+- Email/Password Authentication
+- Firestore Database
 
-6. (Optional) Test the API routes manually:
-```powershell
-# Call the test email route with the token
-curl -X POST "https://<your-deployment>/api/test-email?to=you@example.com&token=<SCHEDULER_TOKEN>"
+---
 
-# Create a test Firestore task for end-to-end verification
-curl -X POST "https://<your-deployment>/api/create-test-task?uid=<userUid>&email=<userEmail>&dueMinutes=10&preAlertMinutes=5&token=<SCHEDULER_TOKEN>"
+## 4️⃣ Configure Firebase SDK
+
+Update your Firebase configuration file:
+
+```javascript
+// js/firebase-config.js
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
 ```
 
-Vercel will now run the scheduler regularly and send Gmail reminders using the serverless API route. No Firebase Cloud Functions or paid services are required.
+---
 
-## Backend details
-The backend scheduler lives in `backend/sendReminders.js`.
-It connects to Firestore, finds tasks with:
-- `completed == false`
-- `preAlertSent == false` and `preAlertTime <= now` for pre-alert reminders
-- `dueSent == false` and `dueTime <= now` for due reminders
+# 🔐 Environment Variables
 
-Then it sends a Gmail notification containing:
-- Task title
-- Task description
-- Scheduled date and time
+Create a `.env` file in the root directory.
 
-### Run manually
-From the project root:
-```powershell
-cd backend
-npm run send-reminders
+## Required Variables
+
+| Variable | Description |
+|----------|-------------|
+| `GMAIL_USER` | Gmail address used for reminders |
+| `GMAIL_APP_PASSWORD` | Gmail App Password |
+| `MAIL_FROM` | Sender email address |
+| `SCHEDULER_TOKEN` | Secure scheduler authentication token |
+| `FIREBASE_SERVICE_ACCOUNT` | Firebase Admin SDK credentials |
+
+---
+
+## Example `.env`
+
+```env
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=your-app-password
+MAIL_FROM=your-email@gmail.com
+SCHEDULER_TOKEN=your-secret-token
+
+FIREBASE_SERVICE_ACCOUNT={
+  "type": "service_account",
+  "project_id": "your-project-id"
+}
 ```
 
-### GitHub Actions scheduler
-A free scheduler has been added at `.github/workflows/send-reminders.yml`.
-It runs every 15 minutes and invokes the reminder script automatically.
+---
 
-## Firebase indexes
-A Firestore index is needed for the reminder query. The index file is `firestore.indexes.json`.
-Deploy it with:
-```powershell
+# 🚀 Deployment
+
+## Deploy to Vercel
+
+### Step 1 — Import Repository
+
+Import your GitHub repository into Vercel.
+
+---
+
+### Step 2 — Configure Environment Variables
+
+Navigate to:
+
+```bash
+Vercel Dashboard → Project Settings → Environment Variables
+```
+
+Add all required environment variables.
+
+---
+
+### Step 3 — Deploy Project
+
+Deploy using Vercel CLI:
+
+```bash
+vercel
+```
+
+Or deploy directly from the Vercel Dashboard.
+
+---
+
+# ⏰ Scheduler Setup
+
+Smart Todo uses automated cron jobs for reminder emails.
+
+## Create Vercel Cron Job
+
+| Setting | Value |
+|----------|-------|
+| Schedule | `* * * * *` |
+| Endpoint | `/api/send-reminders` |
+| Method | `POST` |
+
+---
+
+## Required Header
+
+```http
+x-scheduler-token: YOUR_SCHEDULER_TOKEN
+```
+
+---
+
+## What the Scheduler Does
+
+- Reads scheduled tasks from Firestore
+- Detects upcoming reminders
+- Sends Gmail notifications automatically
+- Prevents duplicate reminder emails
+- Runs every minute
+
+---
+
+# 📧 Gmail Reminder System
+
+The email reminder system includes:
+
+- 📌 Due-date notifications
+- ⏰ Pre-deadline alerts
+- 📤 Automated email delivery
+- 🔒 Secure Gmail SMTP authentication
+- ⚡ Serverless email scheduling
+- 🔄 Duplicate email prevention
+
+---
+
+# 🔥 Firestore Indexes
+
+Deploy Firestore indexes:
+
+```bash
 firebase deploy --only firestore:indexes
 ```
 
-## Notes
-- No paid Firebase Blaze plan is required.
-- No SendGrid or paid email services are required.
-- Email notifications use Gmail SMTP via Nodemailer.
+Index configuration file:
 
-## Screenshots
-- Add screenshots under `screenshots/` and update this section.
+```bash
+firestore.indexes.json
+```
 
-## Future Improvements
-- Add real-time chat presence and typing indicators
-- Implement role-based access and admin monitoring pages
-- Add mobile-specific animations and navigation
-- Add calendar sync and AI productivity suggestions
+---
 
-## Author
-Ibrahim Ahmed Qureshi
+# 🧪 API Testing
+
+## Test Email Endpoint
+
+```bash
+curl -X POST "https://your-deployment.vercel.app/api/test-email?to=you@example.com&token=YOUR_SCHEDULER_TOKEN"
+```
+
+---
+
+## Test Reminder Scheduler
+
+```bash
+curl -X POST "https://your-deployment.vercel.app/api/send-reminders" \
+-H "x-scheduler-token: YOUR_SCHEDULER_TOKEN"
+```
+
+---
+
+# 🖥️ Local Development
+
+## Run Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+## Run Frontend with Live Server
+
+Open:
+
+```bash
+html/main1.html
+```
+
+Using VS Code Live Server extension.
+
+---
+
+# 📊 Current Project Status
+
+| Module | Status |
+|--------|--------|
+| Authentication | ✅ Completed |
+| Dashboard UI | ✅ Completed |
+| Task Management | ✅ Completed |
+| Gmail Notifications | ✅ Completed |
+| Reminder Scheduler | ✅ Completed |
+| Calendar View | ✅ Completed |
+| Eisenhower Matrix | ✅ Completed |
+| Dark/Light Theme | ✅ Completed |
+
+---
+
+# 🚀 Future Improvements
+
+- 🤖 AI productivity suggestions
+- 👥 Team collaboration system
+- 📈 Advanced analytics dashboard
+- 📶 Offline support
+- 📱 Progressive Web App (PWA)
+- 📅 Google Calendar integrations
+- 🧠 Smart recurring tasks
+- 🖱️ Drag-and-drop workflow system
+- 🔍 Advanced search & filtering
+- 📊 Productivity heatmaps
+
+---
+
+# 🔒 Security Best Practices
+
+- Never expose Firebase Admin credentials publicly
+- Store all secrets using Vercel Environment Variables
+- Use App Passwords instead of Gmail account passwords
+- Secure API routes with scheduler tokens
+- Restrict Firestore security rules properly
+
+---
+
+# ⚡ Performance Optimizations
+
+- Optimized Firestore queries
+- Lazy-loaded UI components
+- Efficient DOM updates
+- Lightweight serverless APIs
+- Reduced email scheduling overhead
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+## Steps to Contribute
+
+1. Fork the repository
+2. Create a new feature branch
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature/your-feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 👨‍💻 Author
+
+## Ibrahim Ahmed Qureshi
+
+- 💼 Full Stack Developer
+- 🚀 Productivity System Builder
+- 🔥 Firebase & Modern Web Enthusiast
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+You are free to use, modify, and distribute this project for:
+
+- Educational purposes
+- Portfolio projects
+- Personal productivity systems
+
+---
+
+# ⭐ Support
+
+If you like this project:
+
+- ⭐ Star the repository
+- 🍴 Fork the project
+- 🐛 Report issues
+- 💡 Suggest improvements
+
+---
+
+# 📬 Contact
+
+## GitHub
+
+```bash
+https://github.com/your-github-username
+```
+
+## Email
+
+```bash
+your-email@gmail.com
+```
+
+---
+
+# 💡 Inspiration
+
+Inspired by modern productivity platforms:
+
+- Todoist
+- TickTick
+- Notion
+- Trello
+- Linear
+
+---
+
+# 🏆 Project Vision
+
+Smart Todo aims to deliver a modern productivity ecosystem that combines:
+
+- 🎨 Premium UI/UX
+- 🧠 Smart productivity workflows
+- ⚡ Real-time synchronization
+- 🔔 Intelligent reminder systems
+- ☁️ Cloud-powered architecture
+- 🚀 Enterprise-level performance
+
+into a single powerful productivity platform.
+
+---
+
+<p align="center">
+  <strong>🚀 Smart Todo — Build Productivity Smarter</strong>
+</p>
